@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from australia_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.Homepage.as_view(),name="index"),
+    path('portfolio/', views.Portfolio_details.as_view(),name="portfolio"),
+    path('inner-page/', views.Innerpage.as_view(),name="inner-page"),
 ]
