@@ -486,7 +486,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 .news-btn a{
-  color: white;
+  color: white !important;
 }
 
 #news-btn:hover{
@@ -495,7 +495,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 #news-btn:hover > a{
-  color: black;
+  color: black !important;
 }
 
 #topbar .contact-info a, #topbar{
@@ -846,13 +846,14 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
   margin-bottom: 30px;
+  color: #191919;
 }
 
 .why-us .box span {
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: #ed5b5b;
+  color: #23347c;
 }
 
 .why-us .box h4 {
@@ -876,7 +877,7 @@ section {
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
 
-.why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
+.why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p,.why-us .box:hover a {
   color: #fff;
 }
 
@@ -1393,7 +1394,7 @@ section {
   font-size: 14px;
 }
 
-.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+.contact .php-email-form input:focus {
   background-color: #23347c;
 }
 
@@ -1687,7 +1688,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #23347c;
+  background: #cc1616;
   color: #fff;
   transition: 0.3s;
   border-radius: 4;
@@ -1718,4 +1719,37 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 4px 10px;
+}
+
+.section-title-details{
+  color: #000000;
+}
+
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #cc1616;
 }

@@ -264,7 +264,7 @@
 }
 
 #topbar{
-  background: #6F6F6F;
+  background: #23347C ;
 }
 
 #contact{
@@ -278,10 +278,6 @@
 .nav-menu > ul > li{
   padding: 15px 10px;
   margin-left: 0px;
-}
-
-#news-btn{
-  margin-right: 10px;
 }
 
 .btn-get-started {
@@ -393,22 +389,6 @@ background-color: black;
   }
 }
 
-.news-btn{
-  background-color: #cc1616;
-}
-
-.news-btn a{
-  color: white;
-}
-
-#news-btn:hover{
-  background-color: transparent;
-  border: #cc1616 solid 1px;
-}
-
-#news-btn:hover > a{
-  color: black;
-}
 
 
 /* nominee page card */
