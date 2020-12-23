@@ -44,13 +44,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   width: 40px;
   height: 40px;
-  background: #23347c;
+  background: #cc1616;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #e72323;
+  background: #000;
   color: #fff;
 }
 
@@ -739,7 +739,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -801,7 +801,8 @@ section {
   color: #cc1616;
 }
 
-#more .btn-get-started:hover {
+#more .btn-get-started:
+ {
   background: #cc1616;
   border-color: #cc1616;
   color: #fff;
@@ -1701,7 +1702,7 @@ section {
 #footer .copyright {
   border-top: 1px solid #262626;
   text-align: center;
-  padding-top: 30px;
+ padding-top: 30px;
 }
 
 #footer .credits {

@@ -30,6 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
   <a href='https://www.freepik.com/vectors/infographic'></a>
 
@@ -53,7 +54,7 @@
     </div>
     <div class="social-links">
       <!-- <a href="#" class="twitter"><i class="icofont-twitter"></i></a> -->
-      <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+      <a href="https://www.facebook.com/Visa-to-Australia-104412438242530" class="facebook"><i class="icofont-facebook"></i></a>
       <a href="https://instagram.com/visa.toaustralia?igshid=dai4g1sjd7j1" class="instagram"><i class="icofont-instagram"></i></a>
       <!-- <a href="#" class="skype"><i class="icofont-skype"></i></a>
       <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a> -->
@@ -76,13 +77,13 @@
     <nav class="nav-menu ml-auto d-none d-lg-block">
       <ul>
         <li id="news-btn" class="news-btn"><a href="#">Breaking News</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="{% url 'aboutus' %}">About</a></li>
         <li class="drop-down"><a href="#services">Services</a>
           <ul>
-            <li><a href="#">Work and Skill Visa</a></li>
-            <li><a href="#">Study and Training Visa</a></li>
-            <li><a href="#">Golden Visa</a></li>
-            <li><a href="#">Business and Investor Visa</a></li>
+            <li><a href="{% url 'workvisa' %}">Work and Skill Visa</a></li>
+            <li><a href="{% url 'studentvisa' %}">Study and Training Visa</a></li>
+            <li><a href"{% url 'goldenvisa' %}">Golden Visa</a></li>
+            <li><a href"{% url 'investorvisa' %}">Business and Investor Visa</a></li>
           </ul>
         </li>
         <!-- <li><a href="#portfolio">Portfolio</a></li> -->
@@ -118,7 +119,7 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul> -->
         </li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="{% url 'contactus' %}">Contact</a></li>
 
       </ul>
     </nav><!-- .nav-menu -->
@@ -147,8 +148,8 @@
               <strong>Email:</strong> info@VisaToAustralia.com<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.facebook.com/Visa-to-Australia-104412438242530" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://instagram.com/visa.toaustralia?igshid=dai4g1sjd7j1" class="instagram"><i class="bx bxl-instagram"></i></a>
               <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
             </div>
@@ -230,9 +231,18 @@ $(window).on('load',function(){
   <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
   <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
 
+  <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
 
   <!-- Font awesome -->
 <script src="https://kit.fontawesome.com/f2148c770f.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

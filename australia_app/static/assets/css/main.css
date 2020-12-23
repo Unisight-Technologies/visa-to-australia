@@ -324,8 +324,8 @@
 
 #score .btn-get-started:hover {
     display: inline-block;
-    background-color: black;
-    border-color: #cc1616;
+    background-color: #23347c;
+    border-color: #23347c;
     color: white;
 }
 
@@ -336,13 +336,13 @@ background-color: black;
 
 
 .btn-get-started:hover {
-    background: #cc1616;
-    border-color: #cc1616;
+    background: ##23347c;
+    border-color: ##23347c;
     color: white;
 }
 
 .fa-hand-point-right{
-  color: #CC1616
+  color: ##23347c
 }
 
 #services{

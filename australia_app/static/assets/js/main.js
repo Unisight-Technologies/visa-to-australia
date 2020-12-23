@@ -195,3 +195,25 @@
   });
 
 })(jQuery);
+
+function showModal1(){
+  $('#main_modal1').modal();
+
+}
+
+function showModal2(){
+  $('#main_modal2').modal();
+
+}
+
+function showModal3(){
+  $('#main_modal3').modal();
+
+}
+
+
+// When the user clicks on div, open the popup
+function showPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
