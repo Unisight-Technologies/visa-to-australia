@@ -558,7 +558,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #e82d2d;
+  color: #23347c;
   text-decoration: none;
 }
 

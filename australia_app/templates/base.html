@@ -13,8 +13,8 @@
 
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/logo/logo_cropped1.png' %}" rel="icon">
-  <link href="{% static 'assets/img/logo/logo_cropped1.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/icon_australia.png' %}" rel="icon">
+  <link href="{% static 'assets/img/icon_australia.png' %}" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -82,8 +82,8 @@
           <ul>
             <li><a href="{% url 'workvisa' %}">Work and Skill Visa</a></li>
             <li><a href="{% url 'studentvisa' %}">Study and Training Visa</a></li>
-            <li><a href"{% url 'goldenvisa' %}">Golden Visa</a></li>
-            <li><a href"{% url 'investorvisa' %}">Business and Investor Visa</a></li>
+            <li><a href="{% url 'goldenvisa' %}">Golden Visa</a></li>
+            <li><a href="{% url 'investorvisa' %}">Business and Investor Visa</a></li>
           </ul>
         </li>
         <!-- <li><a href="#portfolio">Portfolio</a></li> -->
@@ -140,10 +140,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="footer-info">
-            <h3>Day</h3>
+            <img class="footer-logo" src="/static/assets/img/VisaTo_Australia-logo-8A-final.jpg" alt="">
             <p>
-              A108 Adam Street <br>
-              NY 535022, USA<br><br>
+              Address line 1 <br>
+              Address line 2<br><br>
               <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@VisaToAustralia.com<br>
             </p>
@@ -159,9 +159,13 @@
         <div class="col-lg-2 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'aboutus' %}">About Us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'workvisa' %}">Work Visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'studentvisa' %}">Student Visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'goldenvisa' %}">Golden VIsa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'investorvisa' %}">Investor Visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contactus' %}">Contactus</a></li>
              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> -->
              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
            </ul>
