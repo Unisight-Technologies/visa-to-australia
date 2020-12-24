@@ -8,9 +8,17 @@
   "use strict";
 
   // Preloader
+  // $(window).on('load', function() {
+  //   if ($('#preloader').length) {
+  //     $('#preloader').fadeOut('slow', function() {
+  //       $(this).remove();
+  //     });
+  //   }
+  // });
+
   $(window).on('load', function() {
     if ($('#preloader').length) {
-      $('#preloader').fadeOut('slow', function() {
+      $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
       });
     }
