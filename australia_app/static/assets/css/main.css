@@ -54,6 +54,11 @@
   margin-top: 100px;
 }
 
+.goog-te-gadget-icon{
+  display:none;
+}
+
+
 #google_translate_element{
   margin-right: 20px;
   background-color: #cc1616;
@@ -63,6 +68,10 @@
   background-color: #cc1616;
 }
 
+.goog-te-banner{
+overflow-x: auto !important;
+
+}
 .modal-dropdown{
   max-width: 100%;
 }
@@ -70,7 +79,8 @@
 @media only screen and (max-width: 700px) {
   #google_translate_element{
     width: 100px;
-    overflow: scroll;
+    overflow-x: auto !important;
+
   }
 }
 
