@@ -31,7 +31,7 @@ SECRET_KEY = 's+^1j-k$@h6+t5!ey!8kgk7zzoo94(mj*s2zccwiji=@%+^y98'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com']
 
 # SMTP EMAIL SETTINGS
 EMAIL_HOST = 'smtp.gmail.com'
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -62,6 +63,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'australia_project.urls'
 
@@ -133,3 +136,4 @@ USE_TZ = True
 import os.path
 STATIC_URL = '/static/'
 STATICFILES_DIRS=(os.path.join('static'),)
+STATIC_ROOT= '/static/'
