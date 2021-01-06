@@ -31,7 +31,7 @@ SECRET_KEY = 's+^1j-k$@h6+t5!ey!8kgk7zzoo94(mj*s2zccwiji=@%+^y98'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com']
+ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com','127.0.0.1']
 
 # SMTP EMAIL SETTINGS
 EMAIL_HOST = 'smtp.gmail.com'
