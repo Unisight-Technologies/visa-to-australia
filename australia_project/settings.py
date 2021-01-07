@@ -29,9 +29,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 's+^1j-k$@h6+t5!ey!8kgk7zzoo94(mj*s2zccwiji=@%+^y98'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com','127.0.0.1', 'visatoaustralia.pro', 'www.visatoaustralia.pro']
 
 # SMTP EMAIL SETTINGS
 EMAIL_HOST = 'smtp.gmail.com'
