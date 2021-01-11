@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from pathlib import Path #step 1
 import environ
-
+import socket
 env = environ.Env()
 # reading .env file
 environ.Env.read_env()
@@ -30,6 +30,9 @@ SECRET_KEY = 's+^1j-k$@h6+t5!ey!8kgk7zzoo94(mj*s2zccwiji=@%+^y98'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+if(socket.gethostname()=="DESKTOP-NPQN816"):
+    DEBUG = True
+
 
 ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com','127.0.0.1', 'visatoaustralia.pro', 'www.visatoaustralia.pro']
 
