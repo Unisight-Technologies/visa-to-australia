@@ -22,84 +22,31 @@ chart.projection = new am4maps.projections.Miller();
 // Create map polygon series
 var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
+// Exclude Antartica
+polygonSeries.exclude = ["AQ"];
+
 // Make map load polygon (like country names) data from GeoJSON
 polygonSeries.useGeodata = true;
 
 // Configure series
 var polygonTemplate = polygonSeries.mapPolygons.template;
-polygonTemplate.tooltipText = "{name}";
+if( name == "Malta")
+{
+  polygonTemplate.tooltipHTML = '<b>{name}</b><br><a href="https://visatomalta.com">Visit us</a>';
+  console.log("Hi naitik !!!");
+}
+else {
+  polygonTemplate.tooltipHTML = '<b>{name}</b><br><a href="https:visato{name.urlEncode()}.pro">Visit us</a>';
+
+}
 polygonTemplate.fill = am4core.color("#74B266");
+
+// Set up tooltips
+polygonSeries.calculateVisualCenter = true;
+polygonTemplate.tooltipPosition = "fixed";
+polygonSeries.tooltip.label.interactionsEnabled = true;
+polygonSeries.tooltip.keepTargetHover = true;
 
 // Create hover state and set alternative fill color
 var hs = polygonTemplate.states.create("hover");
 hs.properties.fill = am4core.color("#367B25");
-
-// Remove Antarctica
-polygonSeries.exclude = ["AQ"];
-
-// Add some data
-polygonSeries.data = [{
-  "id": "ES",
-  "name": "Spain",
-  "value": 100,
-  "fill": am4core.color("#F05C5C")
-
-}, {
-  "id": "IT",
-  "name": "Italy",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "MT",
-  "name": "Malta",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "GR",
-  "name": "Greece",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "CY",
-  "name": "Cyprus",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "IE",
-  "name": "Ireland",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "CA",
-  "name": "Canada",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "DE",
-  "name": "Germany",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "NZ",
-  "name": "New Zealand",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "DK",
-  "name": "Denmark",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "US",
-  "name": "United States",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-},{
-  "id": "AU",
-  "name": "Australia",
-  "value": 50,
-  "fill": am4core.color("#F05C5C")
-}];
-
-// Bind "fill" property to "fill" key in data
-polygonTemplate.propertyFields.fill = "fill";
