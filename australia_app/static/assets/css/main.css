@@ -111,7 +111,6 @@ overflow-x: auto !important;
   }
 }
 
-
 /* PIECHART ENDS */
 
 .shadow {
@@ -537,4 +536,25 @@ background-color: black;
 
 .cont-text {
   color: white;
+}
+
+
+
+/* MAP */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  width: 100%;
+  height: 98vh;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .map{
+    width: 100%;
+    margin-left: 0;
+    height: 90%;
+  }
 }
