@@ -2,7 +2,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Language", "Education", "Work Experience", "Age", "Adaptability"],
+    labels: ["age", "lang", "edu", "finance", "buisness","bstream","istream","qualify","endro"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -11,8 +11,11 @@ var myChart = new Chart(ctx, {
         "#9b59b6",
         "#f1c40f",
         "#e74c3c",
+        "#e83e8c",
+        "#20c997",
+        "#6c757d",
       ],
-      data: [28, 25, 15, 12, 10]
+      data: [25,10,10,35,25,15,15,10,10]
     }]
   },
   weight: 150
@@ -28,69 +31,129 @@ canvas.onclick = function(evt){
         var idx = activePoints[0]['_index'];
 
         var label = chartData.labels[idx];
-        if(label == "Language"){
-
-          $('#edu').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#lang').slideToggle();
-
-        }
-
-        if(label == "Education"){
-
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#edu').slideToggle();
-
-        }
-
-        if(label == "Work Experience"){
+        if(label == "age"){
 
           $('#lang').css('display', 'none');
           $('#edu').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#age').css('display', 'none');
-          $('#work').slideToggle();
-
-        }
-
-        if(label == "Age"){
-
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#emp').css('display', 'none');
-          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
           $('#age').slideToggle();
 
         }
 
-        if(label == "Arranged Employment"){
+        if(label == "lang"){
 
-          $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#adapt').css('display', 'none');
-          $('#edu').css('display', 'none');
           $('#age').css('display', 'none');
-          $('#emp').slideToggle();
+          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#lang').slideToggle();
 
         }
 
-        if(label == "Adaptability"){
+        if(label == "edu"){
 
           $('#lang').css('display', 'none');
-          $('#work').css('display', 'none');
-          $('#edu').css('display', 'none');
-          $('#emp').css('display', 'none');
           $('#age').css('display', 'none');
-          $('#adapt').slideToggle();
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#edu').slideToggle();
+
+        }
+
+        if(label == "finance"){
+
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none')
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#finance').slideToggle();
+
+        }
+
+        if(label == "buisness"){
+
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#buisness').slideToggle();
+
+        }
+
+        if(label == "bstream"){
+
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#bstream').slideToggle();
+
+        }
+
+        if(label == "istream"){
+
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#istream').slideToggle();
+
+        }
+
+        if(label == "qualify"){
+
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#endro').css('display', 'none');
+          $('#qualify').slideToggle();
+
+        }
+
+        if(label == "endro"){
+
+          $('#lang').css('display', 'none');
+          $('#edu').css('display', 'none');
+          $('#finance').css('display', 'none');
+          $('#buisness').css('display', 'none');
+          $('#bstream').css('display', 'none');
+          $('#istream').css('display', 'none');
+          $('#qualify').css('display', 'none');
+          $('#age').css('display', 'none');
+          $('#endro').slideToggle();
 
         }
       }
@@ -101,8 +164,8 @@ canvas.onclick = function(evt){
 var scored = 0;
 
 
-var ctx = document.getElementById("newChart1").getContext('2d');
-var newChart1 = new Chart(ctx, {
+var ctx = document.getElementById("myChart1").getContext('2d');
+var myChart1 = new Chart(ctx, {
   type: 'pie',
   data: {
     labels: [],
@@ -117,21 +180,26 @@ var newChart1 = new Chart(ctx, {
 });
 
 function calculateScore1(){
-  var language = document.forms["score-form1"]["language"].value;
-  var work = document.forms["score-form1"]["work"].value;
-  var education = document.forms["score-form1"]["education"].value;
-  var family = document.forms["score-form1"]["family"].value;
   var age = document.forms["score-form1"]["age"].value;
+  var language = document.forms["score-form1"]["language"].value;
+  var education = document.forms["score-form1"]["education"].value;
+  var finance = document.forms["score-form1"]["finance"].value;
+  var buisness = document.forms["score-form1"]["buisness"].value;
+  var bstream = document.forms["score-form1"]["bstream"].value;
+  var istream = document.forms["score-form1"]["istream"].value;
+  var qualify = document.forms["score-form1"]["qualify"].value;
+  var endrosment= document.forms["score-form1"]["endrosment"].value;
 
-  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(age))
+
+  var score = (Number(age)+Number(language)+Number(education)+Number(finance)+Number(buisness)+Number(bstream)+Number(istream)+Number(qualify)+Number(endrosment))
   scored = score;
 
 
-  newChart1.data.labels.push("Your Marks ");
-  newChart1.data.datasets[0].data.push(scored);
-  newChart1.data.labels.push(" ");
-  newChart1.data.datasets[0].data.push(100-scored);
-  newChart1.update()
+  myChart1.data.labels.push("Your Marks ");
+  myChart1.data.datasets[0].data.push(scored);
+  myChart1.data.labels.push(" ");
+  myChart1.data.datasets[0].data.push(100-scored);
+  myChart1.update()
 
     $('#main_modal1').modal('hide');
     $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");

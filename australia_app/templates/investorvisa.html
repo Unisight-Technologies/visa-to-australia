@@ -2,6 +2,135 @@
 {% load static %}
 {% block body_block %}
 
+  <style media="screen">
+  #age ,#lang ,#edu, #finance, #buisness, #bsteam ,#istream,#qualify,#endro{
+    display: none;
+  }
+
+</style>
+<!-- ------------------MODALS START----------------------- -->
+<!-- Modal Workers-->
+
+<div class="modal fade" id="main_modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="score-form1">
+
+
+          <div class="form-group">
+
+            <b><label for="">Enter your age: </label></b><br>
+            <select class="modal-dropdown" name="age">
+              <option value="20">
+                18-24 years
+              </option>
+              <option value="30">
+                25-32 years
+              </option>
+              <option value="25">
+                33-39 years
+              </option>
+              <option value="205">
+                40-44 years
+              </option>
+              <option value="15">
+                45-54 years
+              </option>
+              <option value="0">
+                55 and older
+              </option>
+            </select><br>
+
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your English language ability:</label></b>
+            <select class="modal-dropdown" name="language">
+              <option value="5">
+                Vocational English
+              </option>
+              <option value="10">
+              Proficiet English
+              </option>
+
+            </select>
+
+
+          <b><label for="">Select your Educational Qualifications:</label></b><br>
+          <select class="modal-dropdown" name="education">
+            <option value="5">Trade certificate, diploma or bachelor degree by an Australian education institute; or a bachelor qualification recognised by an educational  institution of a recognised standard</option>
+            <option value="10">A Bachelor degree in business, science or technology by an Australian institution; or a bachelor qualification in business, science or technology by an educational institution of a recognised standard</option>
+
+          </select><br><br>
+
+          <b><label for="">Financial assets:</label></b><br>
+          <select class="modal-dropdown" name="finance">
+            <option value="5">Not less than AUD800,000</option>
+            <option value="15">Not less than AUD1.3 million</option>
+            <option value="25">Not less than AUD1.8 million</option>
+            <option value="35">Not less than AUD2.25 million</option>
+          </select><br><br>
+
+          <b><label for="">Business turnover:</label></b><br>
+          <select class="modal-dropdown" name="buisness">
+            <option value="5">Not less than AUD500,000</option>
+            <option value="15">Not less than AUD1 million</option>
+            <option value="25">Not less than AUD1.5 million</option>
+            <option value="35">Not less than AUD2 million</option>
+          </select><br><br>
+
+          <b><label for="">Business Innovation stream only:</label></b><br>
+          <select class="modal-dropdown" name="bstream">
+            <option value="10">Not less than 4 years within the preceding 5 years</option>
+            <option value="15">Not less than 7 years within the preceding 8 years</option>
+          </select><br><br>
+
+          <b><label for="">Investor stream only:</label></b><br>
+          <select class="modal-dropdown" name="istream">
+            <option value="10">Not less than 4 years</option>
+            <option value="15">Not less than 7 years</option>
+          </select><br><br>
+
+          <b><label for="">Business innovation qualifications:</label></b><br>
+          <select class="modal-dropdown" name="qualify">
+            <option value="15">Patents or designs registered not less than 1 year before that time and  used in the day to day activities of the main business </option>
+            <option value="10">Trademarks registered not less than 1 year before that time and  used in the day to day activities of the main business </option>
+            <option value="5">An ownership in and day to day participation in the management of one or more main business operated under a  formal joint venture agreement/s entered into no less than 1 year before the time  </option>
+            <option value="15">An ownership interest in a main business/s that derives no less than 50% of its annual turnover from export trade </option>
+            <option value="10">An ownership interest in a main buisness/s not more that 5 years before :
+              had an average annualised growth in turnover that was greater than 20% per annum over 3 continuous fiscal years; and
+              in at least one of the 3 fiscal years employed 10 or more employees for a total number of hours that was at least the total number of hours that would have been worked by 10 full-time employees</option>
+              <option value="10">An ownership interest in a main business/s that received :
+                a grant from a government body in your home country of at least AUD10,000 for the purposes of early phase start up of a business, product commercialisation, business development or business expansion
+                or venture capital funding of at least AUD100,000 not more than 4 years before the time of the invitation for the purposes of early phase start up of a business, product commercialisation, business development or business expansion</option>
+          </select><br><br>
+
+          <b><label for="">Special endorsement:</label></b><br>
+          <select class="modal-dropdown" name="endrosment">
+            <option value="10">The nominating State or Territory government agency has determined that your proposed business is of unique and important benefit to the State or Territory where the nominating government agency is located</option>
+          </select><br><br>
+
+        <button type="button" onclick="calculateScore1()" class="modal-btn">Calculate Now</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <main id="main">
 
   <style>
@@ -110,7 +239,7 @@
                 <p class="text-muted">Better than last week (25%)</p> -->
                 <h4 class="text-uppercase font-weight-bold my-4">What is an Australia Business / Investor visa?</h4>
                 <p class="text-muted" align="justify">The Investor Visa schemes in Australia is a citizenship by investment scheme is developed to target accomplished business owners or investors to migrate and contribute to the Australian economy actively. However, you have to go through several visa stages (must meet stay requirements of <b>4 years and pass the test to be eligible</b>) before you can acquire Australian Citizenship as there is no direct Australian Citizenship option. If you are looking for fast and direct citizenship option, you can explore citizenship by investment in Cyprus which only take 6 – 12 months to process.
-Let’s look into the various investment vis options available to suit individuals with different business or investment background.
+Let’s look into the various investment visa options available to suit individuals with different business or investment background.
 </p>
 
               </div>
@@ -384,6 +513,8 @@ Let’s look into the various investment vis options available to suit individua
       </div>
       <!--Grid row-->
 
+      <!-- Pie chart -->
+      <h2 style="text-centre"><b>Points table for Business Innovation and Investment (Provisional) visa (subclass 188)</b></h2>
       <div class="row">
 
           <div class="container1">
@@ -395,34 +526,22 @@ Let’s look into the various investment vis options available to suit individua
 
           <div class="col">
             <div class="container" style="margin-top: 50px; padding-right: 100px;" >
-              <div id="edu">
-                <h1>Education(25 Points)</h1>
+              <div id="age">
+                <h1>Age</h1>
                 <p>
-                  Foreign nationals (FN) get points for their post-secondary
-                  education – degree, diploma or certificate. In order to get points in
-                  this category the FN needs to have an Educational Credential Assessment (ECA)
-                  report from a designated organization showing that their education is equivalent
-                  to a completed certificate, diploma or degree from a Canadian post-secondary institution.
-                  Having a Master’s degree will qualify for more points.</p>
+                  You will only be awarded one set of points under each factor. For example, if you have an English language ability of Proficient, you will be awarded 10 points for Proficient English and not points for both Proficient English and Vocational English</p>
 
               </div>
 
               <div id="lang">
 
-                <h1>Language(28 Points)</h1>
-                <p>Canada has two official languages - English and French.
-                  Foreign nationals (FN) who desire to immigrate to Canada need to have
-                  good command in either of the two official languages. To prove their
-                  language level, they need to have an approved language test. They need
-                  to get a minimum level of Canadian Language Benchmark (CLB) 7 for
-                  English, or Niveaux de compétencelinguistiquecanadiens (NCLC) 7 for
-                  French in listening, reading, writing and speaking. Depending on their
-                  score, they can get a maximum of 28 points.</p>
+                <h1>English Language (Adaptability)</h1>
+                <p>content</p>
 
               </div>
 
-              <div id="work">
-                <h1>Work Experience(15 Points)</h1>
+              <div id="edu">
+                <h1>Educational Qualifications</h1>
                 <p>Foreign nationals (FN) get points for the number of years
                   they have worked full-time doing paid work (at least 30 hours per week,
                   or an equal amount of part-time [15 hours per week for 24 months]).
@@ -430,8 +549,8 @@ Let’s look into the various investment vis options available to suit individua
                   studying. Having six or more years’ experience affords them 15 points.</p>
               </div>
 
-              <div id="adapt">
-                <h1>Adaptability(10 Points)</h1>
+              <div id="finance">
+                <h1>Financial assets</h1>
 
                 <p>Foreign nationals (FN) and their spouse can earn 10 points
                   in this category. If the spouse’s language level in either French or
@@ -441,9 +560,9 @@ Let’s look into the various investment vis options available to suit individua
                   FN has a relative in Canada, they qualify for 5 additional points.</p>
               </div>
 
-              <div id="emp">
+              <div id="buisness">
 
-                <h1>Arranged Employment(10 Points)</h1>
+                <h1>Business turnover</h1>
 
                 <p>Foreign nationals (FN) can get points if they have a job
                   offer of at least one year from a Canadian employer. They need to
@@ -452,22 +571,76 @@ Let’s look into the various investment vis options available to suit individua
                   will get 10 points. </p>
               </div>
 
-              <div id="age">
+              <div id="bstream">
 
-                <h1>Age(12 Points)</h1>
+                <h1>Buisness Innovation stream only</h1>
+
+                <p>Buisness Experience</p>
+              </div>
+
+              <div id="istream">
+
+                <h1>Investor stream only</h1>
+
+                <p>Investor Experience</p>
+              </div>
+
+              <div id="qualify">
+
+                <h1>Buisness Innovation stream only</h1>
 
                 <p>Age is a key factor if a FN want to reach the 67 points
                   threshold.  FN between the age group of 18-35 get maximum points.
                   As the age increases the points for age drop.</p>
               </div>
 
+              <div id="endro">
+
+                <h1>Special Endrosement</h1>
+
+                <p>Age is a key factor if a FN want to reach the 67 points
+                  threshold.  FN between the age group of 18-35 get maximum points.
+                  As the age increases the points for age drop.</p>
+              </div>
 
             </div>
           </div>
 
             </div>
-</section>
+            <div class="text-center">
+    <br><button onclick="showModal1()" class="express-btn3 modal-btn" type="button">Calculate your score!</button>
+  </div>
 
+  <div class="container">
+    <div class="text-center performance3">
+    <br><h1>Your Performance:</h1>
+    </div>
+    <div class="row">
+
+        <div class="container1">
+          <div class="resultChart">
+            <canvas id="myChart1"></canvas>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="text-center" style="padding-top: 70px;">
+            <br><h3 class="insert-here1-1"></h3>
+            <h4 class="insert-here1-2"></h4>
+          </div>
+        </div>
+
+  </div>
+</div>
+ </section>
 
 </main>
+
+ <script type="text/javascript">
+   $('#myModal').on('shown.bs.modal', function () {
+   $('#myInput').trigger('focus')
+  })
+ </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 {% endblock %}
