@@ -972,6 +972,7 @@ section {
   background: #23347c;
   border-color: #23347c;
   padding: 70px 20px 90px 20px;
+  color: white;
 }
 
 .services .icon-box:hover .icon {

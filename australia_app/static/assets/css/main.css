@@ -312,8 +312,8 @@ overflow-x: auto !important;
     display: inline-block;
     padding: 10px 28px;
     transition: 0.5s;
-    border: 2px solid #cc1616;
-    color: #cc1616;
+    border: 2px solid #23347c;
+    color: #23347c;
     background-color: transparent;
 }
 
@@ -334,7 +334,7 @@ overflow-x: auto !important;
 #score .btn-get-started:hover {
     display: inline-block;
     background-color: black;
-    border-color: black;
+    border-color: white;
     color: white;
 }
 
