@@ -200,15 +200,19 @@ var scoreChart1 = new Chart(ctx, {
   }
 });
 
-function calculateScore1(){
-  var language = document.forms["score-form1"]["language"].value;
-  var work = document.forms["score-form1"]["work"].value;
-  var education = document.forms["score-form1"]["education"].value;
-  var family = document.forms["score-form1"]["family"].value;
-  var age = document.forms["score-form1"]["age"].value;
-  var emp = document.forms["score-form1"]["emp"].value;
+function calculateScore_1(){
+  var age1 = document.forms["score-form1"]["age1"].value;
+  var english1 = document.forms["score-form1"]["english1"].value;
+  var skilled1 = document.forms["score-form1"]["skilled1"].value;
+  var educational1 = document.forms["score-form1"]["educational1"].value;
+  var specialist1 = document.forms["score-form1"]["specialist1"].value;
+  var australian1 = document.forms["score-form1"]["australian1"].value;
+  var professional1 = document.forms["score-form1"]["professional1"].value;
+  var credentialled1 = document.forms["score-form1"]["credentialled1"].value;
+  var study1 = document.forms["score-form1"]["study1"].value;
+  var partner1 = document.forms["score-form1"]["partner1"].value;
 
-  var score = (Number(language)+Number(work)+Number(education)+Number(family)+Number(age)+Number(emp))
+  var score = (Number(age1)+Number(english1)+Number(skilled1)+Number(educational1)+Number(specialist1)+Number(australian1)+Number(professional1)+Number(credentialled1)+Number(study1)+Number(partner1))
   scored = score;
 
 
@@ -219,7 +223,7 @@ function calculateScore1(){
   scoreChart1.update()
 
 if(score>=67){
-  $('#main_modal1').modal('hide');
+  $('#result_modal1').modal('hide');
   $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
   $('.insert-here1-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
   $('.insert-here1-1').css('background', '#06DB5E');
@@ -229,7 +233,7 @@ if(score>=67){
 
 
 else{
-    $('#main_modal1').modal('hide');
+    $('#result_modal1').modal('hide');
     $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
     $('.insert-here1-2').text("SORRY, YOU DID NOT PASS THE TEST.");
     $('.insert-here1-1').css('background', '#E74C3C');

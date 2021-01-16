@@ -210,14 +210,28 @@ function showModal1(){
 }
 
 function showModal2(){
-  $('#main_modal2').modal();
+  $('#result_modal1').modal();
 
 }
 
 function showModal3(){
-  $('#main_modal3').modal();
+  $('#result_modal2').modal();
 
 }
+function showModal4(){
+  $('#result_modal3').modal();
+
+}
+
+function showModal5(){
+  $('#result_modal4').modal();
+
+}
+
+// function showModal5(){
+//   $('#result_modal1').modal();
+//
+// }
 
 
 // When the user clicks on div, open the popup
