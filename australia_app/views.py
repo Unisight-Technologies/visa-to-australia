@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View, TemplateView
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+
 from . import models
 from .models import News
 from . import mailHandler
@@ -51,19 +54,30 @@ class Goldenpage(TemplateView):
 
 class Newspage(View):
     def get(self,request,*args,**kwargs):
-        news= Scrapper()
-        for i in range(10):
-            current_news=News.objects.create(
-            title= news.get_titles[i],
-            date= news.get_dates[i],
-            desc= news.get_descriptions[i],
-            link= news.get_links[i],
-            )
-            current_news.save()
-
+        
         all_news= News.objects.all()
         context= {
         "news":all_news
         }
 
         return render(request,"news.html",context)
+
+def refresh(request):
+    if(models.News.objects.all().exists()):
+        for i in range(10):
+            old_news = News.objects.all()[0]
+            old_news.delete()
+
+
+    news= Scrapper()
+    for i in range(10):
+        current_news=News.objects.create(
+        title= news.titles[i],
+        date= news.dates[i],
+        desc= news.descriptions[i],
+        link= news.links[i],
+        )
+        current_news.save()
+
+
+    return HttpResponse("News fetched successfully!")
