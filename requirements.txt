@@ -2,3 +2,5 @@ django
 gunicorn
 whitenoise
 django-environ
+beautifulsoup4
+requests
