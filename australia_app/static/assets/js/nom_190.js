@@ -251,29 +251,29 @@ function calculateScore_2(){
   scoreChart2.data.datasets[0].data.push(100-scored);
   scoreChart2.update()
 
-if(score>=67){
+// if(score>=67){
   $('#result_modal2').modal('hide');
-  $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
-  $('.insert-here1-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
-  $('.insert-here1-1').css('background', '#06DB5E');
-}
+  $('.insert-here2-1').text("YOUR SCORE: "+score+" pts");
+  $('.insert-here2-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
+  $('.insert-here2-1').css('background', '#06DB5E');
+// }
 
 
 
 
-else{
-    $('#result_modal2').modal('hide');
-    $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
-    $('.insert-here1-2').text("SORRY, YOU DID NOT PASS THE TEST.");
-    $('.insert-here1-1').css('background', '#E74C3C');
-    $('.insert-here1-1').css('color', 'white');
-  }
+// else{
+//     $('#result_modal2').modal('hide');
+//     $('.insert-here2-1').text("YOUR SCORE: "+score+" pts");
+//     $('.insert-here2-2').text("SORRY, YOU DID NOT PASS THE TEST.");
+//     $('.insert-here2-1').css('background', '#E74C3C');
+//     $('.insert-here2-1').css('color', 'white');
+//   }
   //
   //
   //
   //
   // }
-  $('.express-btn1').css('display', 'none');
-  $('.performance1').css('display', 'inherit');
+  $('.express-btn2').css('display', 'none');
+  $('.performance2').css('display', 'inherit');
 
 }
