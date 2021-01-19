@@ -62,6 +62,7 @@ class Newspage(View):
 
         return render(request,"news.html",context)
 
+@login_required(login_url='/admin/')
 def refresh(request):
     if(models.News.objects.all().exists()):
         for i in range(10):
