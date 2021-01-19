@@ -54,7 +54,7 @@ class Goldenpage(TemplateView):
 
 class Newspage(View):
     def get(self,request,*args,**kwargs):
-        
+
         all_news= News.objects.all()
         context= {
         "news":all_news
