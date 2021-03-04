@@ -2,8 +2,8 @@ var ctx = document.getElementById("reg491_chart").getContext('2d');
 var reg491_chart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Age", "English language skills", "Skilled employment experience", "Educational qualifications", "Specialist education qualification",
-    "Australian study requirement", "Professional Year in Australia","Credentialled community language","Study in regional Australia","Partner skills","Nomination"],
+    labels: ["Age", "English", "Skilled", "Educational", "Specialist",
+    "Australian", "Professional ","Credentialled","Study","Partner","Nomination"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -51,7 +51,7 @@ canvas.onclick = function(evt){
 
         }
 
-        if(label == "English language skills"){
+        if(label == "English"){
 
           $('#Age4').css('display', 'none');
           $('#Skilled4').css('display', 'none');
@@ -67,7 +67,7 @@ canvas.onclick = function(evt){
 
         }
 
-        if(label == "Skilled employment experience"){
+        if(label == "Skilled"){
 
           $('#Age4').css('display', 'none');
           $('#English4').css('display', 'none');
@@ -82,7 +82,7 @@ canvas.onclick = function(evt){
           $('#Skilled4').slideToggle();
         }
 
-        if(label == "Educational qualifications"){
+        if(label == "Educational"){
 
           $('#Age4').css('display', 'none');
           $('#English4').css('display', 'none');
