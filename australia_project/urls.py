@@ -26,5 +26,6 @@ urlpatterns = [
     path('investorvisa/', views.Investorpage.as_view(),name="investorvisa"),
     path('goldenvisa/', views.Goldenpage.as_view(),name="goldenvisa"),
     path('news/',views.Newspage.as_view(),name="news"),
+    path('coming_soon/', views.Comingpage.as_view(),name="coming_soon"),
     path('refresh/', views.refresh, name='refresh')
 ]

@@ -18,6 +18,9 @@ class Homepage(TemplateView):
 class Aboutpage(TemplateView):
     template_name= "aboutus.html"
 
+class Comingpage(TemplateView):
+    template_name= "coming_soon.html"
+
 class Contactpage(TemplateView):
     template_name= "contactus.html"
 
