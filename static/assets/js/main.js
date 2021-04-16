@@ -218,7 +218,6 @@ function showModal3(){
   $('#result_modal2').modal();
 
 }
-
 function showModal4(){
   $('#result_modal3').modal();
 
@@ -229,6 +228,10 @@ function showModal5(){
 
 }
 
+// function showModal5(){
+//   $('#result_modal1').modal();
+//
+// }
 
 
 // When the user clicks on div, open the popup

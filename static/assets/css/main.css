@@ -42,14 +42,6 @@
   background: #e82d2d;
 }
 
-#intro, #process, #eligibility ,#edu, #work,#adapt, #emp, #age{
-  display: none;
-}
-
-#edu2, #work2,#adapt2, #emp2, #edu3, #work3,#adapt3, #emp3 {
-  display: none;
-}
-
 #main{
   margin-top: 100px;
 }
@@ -110,7 +102,6 @@ overflow-x: auto !important;
     margin-left: 0;
   }
 }
-
 
 /* PIECHART ENDS */
 
@@ -313,8 +304,8 @@ overflow-x: auto !important;
     display: inline-block;
     padding: 10px 28px;
     transition: 0.5s;
-    border: 2px solid #cc1616;
-    color: #cc1616;
+    border: 2px solid #23347c;
+    color: #23347c;
     background-color: transparent;
 }
 
@@ -334,8 +325,8 @@ overflow-x: auto !important;
 
 #score .btn-get-started:hover {
     display: inline-block;
-    background-color: #23347c;
-    border-color: #23347c;
+    background-color: black;
+    border-color: white;
     color: white;
 }
 
@@ -537,4 +528,25 @@ background-color: black;
 
 .cont-text {
   color: white;
+}
+
+/* pie chart */
+
+/* MAP */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  width: 100%;
+  height: 98vh;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .map{
+    width: 100%;
+    margin-left: 0;
+    height: 90%;
+  }
 }
