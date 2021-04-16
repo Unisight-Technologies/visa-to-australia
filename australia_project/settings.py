@@ -19,7 +19,7 @@ env = environ.Env()
 environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 # print(BASE_DIR, TEMPLATE_DIR)
 # Quick-start development settings - unsuitable for production
@@ -136,5 +136,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 import os.path
 STATIC_URL = '/static/'
-STATICFILES_DIRS=(os.path.join('static'),)
-STATIC_ROOT = '/static/'
+# STATICFILES_DIRS=(os.path.join('static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
