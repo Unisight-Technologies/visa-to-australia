@@ -36,12 +36,12 @@ if(socket.gethostname()=="DESKTOP-NPQN816" or socket.gethostname()=="Ananya-PC" 
 ALLOWED_HOSTS = ['visatoaustralia.herokuapp.com','127.0.0.1', 'visatoaustralia.pro', 'www.visatoaustralia.pro']
 
 # SMTP EMAIL SETTINGS
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = env("EMAIL")
-EMAIL_HOST_PASSWORD = env("PASSWORD")
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = env("EMAIL")
+# EMAIL_HOST_PASSWORD = env("PASSWORD")
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
 
 # Application definition
 
