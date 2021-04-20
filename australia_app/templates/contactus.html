@@ -89,7 +89,28 @@
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
           </div> -->
-          <div class="text-center"><button class="submit1" type="submit">Send Message</button></div>
+          <!-- alert-messages -->
+       <div class="row login" style="width: 100%;  text-align: center;" class="row">
+       {% if messages %}
+       {% for message in messages %}
+       {% if message.tags == 'error' %}
+       <div class="alert alert-danger alert-dismissible fade show" role="alert">
+       {% else %}
+       <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+       {% endif %}
+      {{ message }}
+       <button type="button" class="close" style="background:transparent; border:black 1px solid;" data-dismiss="alert" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+       {% endfor %}
+       {% endif %}
+      </div>
+<!-- alert-messages-ends -->
+
+            <div class="g-recaptcha" data-sitekey="6LdEmLAaAAAAALi8Y9IAZ4TCGQiu5rY4PwzgQxMc"></div>
+          <p></p>
+            <div class="text-center"><button class="submit1" type="submit">Send Message</button></div>
         </form>
       </div>
 
@@ -135,4 +156,5 @@
 <script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <script src="{% static 'assets/js/map.js' %}"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 {% endblock %}
